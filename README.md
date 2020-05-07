@@ -8,7 +8,7 @@ Serverless Framework allows you to build, test and deploy serverless functions f
 Here i am buidling a simple web node.js serverless funtion and adding the Check Point CloudGuard Workload plugin to add proact plugin for SAST and FSP(Function Self Protection) for DAST or Runtime security. 
 SAST is the scanning of of the function source code while the runtime security whitelists a function behavior.
 
-I creating a Serverless project called lamdba-cicd which will created a dir with the same name. I have created a github repo.
+Started a Serverless project called lamdba-cicd which will create a dir with the same name and will generate a serverless.yaml file. I have created a github repo to be used as SCM,
 The CloudGuard plugin is added to the serverless.yaml file using the followin syntax:
 
 ```

@@ -1,0 +1,34 @@
+CredentialsUsage:
+  Result: Succeeded
+PermissiveRole:
+  RedundantPermissions:
+    logs:
+      logs:CreateLogStream:
+      - arn:aws:logs:us-east-1:392332258562:log-group:/aws/lambda/lambda-cicd-dev*:*
+      logs:PutLogEvents:
+      - arn:aws:logs:us-east-1:392332258562:log-group:/aws/lambda/lambda-cicd-dev*:*:*
+  Result: Warning
+  SuggestedRole:
+    Statement:
+    - Action:
+      - logs:CreateLogGroup
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:us-east-1:392332258562:log-group:/aws/lambda/lambda-cicd-dev*:*
+      Sid: ProtegoGenerated46bf3826
+    - Action:
+      - logs:CreateLogStream
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:us-east-1:392332258562:log-group:/aws/lambda/lambda-cicd-dev-hello:*
+      Sid: ProtegoGenerated280bae9f
+    - Action:
+      - logs:PutLogEvents
+      Effect: Allow
+      Resource:
+      - arn:aws:logs:us-east-1:392332258562:log-group:/aws/lambda/lambda-cicd-dev-hello:*:*
+      Sid: ProtegoGeneratedc521a4e8
+RuleViolation:
+  Result: Succeeded
+VulnerableDependency:
+  Result: Succeeded

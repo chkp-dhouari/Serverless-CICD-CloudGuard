@@ -1,0 +1,17 @@
+Failed:
+  Functions: {}
+Skipped:
+  Functions: {}
+Successful:
+  Functions:
+    hello:
+      CredentialsUsage:
+        Result: Succeeded
+      PermissiveRole:
+        Result: Warning
+        Severity: Low
+        ShortReason: Role Too Permissive
+      RuleViolation:
+        Result: Succeeded
+      VulnerableDependency:
+        Result: Succeeded

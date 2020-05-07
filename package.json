@@ -1,0 +1,22 @@
+{
+  "name": "lambda-cicd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chkp-dhouari/lambda-cicd.git"
+  },
+  "author": "Dean Houari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chkp-dhouari/lambda-cicd/issues"
+  },
+  "homepage": "https://github.com/chkp-dhouari/lambda-cicd#readme",
+  "devDependencies": {
+    "serverless-protego-plugin": "https://artifactory.app.protego.io/protego-serverless-plugin.tgz"
+  }
+}

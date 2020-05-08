@@ -182,9 +182,12 @@ Serverless: Publishing service to the Serverless Dashboard...
 Serverless: Successfully published your service to the Serverless Dashboard: https://dashboard.serverless.com/tenants/deanj08/applications/lambda-cicd-app/services/lambda-cicd/stage/dev/region/us-east-1
 dean:lambda-cicd dasig$
 
-#### The CICD Jobs can be managed from CloudGuard Workload for more details:
 
 ```
+
+#### The CICD Jobs can be managed from CloudGuard Workload for more details:
+
+
  ![header image](cicd1.png)
 
 

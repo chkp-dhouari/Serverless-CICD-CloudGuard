@@ -1,4 +1,4 @@
-# CloudGuard Workload CICD Security:
+# Check Point CloudGuard Workload CICD Security:
 
 ## CloudGuard Workload Serverless Security CICD pipeline SCM
 

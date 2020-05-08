@@ -1,9 +1,8 @@
 # Check Point CloudGuard Workload CICD Security:
 
-## CloudGuard Workload Serverless Security CICD pipeline SCM
+## CloudGuard Workload Serverless CICD pipeline with SAST/DAST Security
 
-SCM for serverless functions code to be deployed on AWS using the CICD AWS SAM pipeline with FSP/Proact plugin for serverless security,
-I am using the Open source Serverless Framework to use a CICD pipeline to deploy a serverless function on AWS while adding SAST with Proact and DAST with FSP to scan the function source code, do config compliance and runtime security.
+Deploying serverless Lambda functions on AWS using a Serverless Framework CICD pipeline with the Check Point CloudGuard Workload solution for serverless Build and Runtime security,
 Serverless Framework allows you to build, test and deploy serverless functions from your local machine to the cloud. 
 Here i am buidling a simple web node.js serverless funtion and adding the Check Point CloudGuard Workload plugin to add proact plugin for SAST and FSP(Function Self Protection) for DAST or Runtime security. 
 SAST is the scanning of of the function source code while the runtime security whitelists a function behavior.

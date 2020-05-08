@@ -22,6 +22,8 @@ The Serverless Framework (using Open Source)
 https://www.serverless.com/framework/docs/providers/aws/
 
 ```
+
+Installing the Serverless Framwework will create a project directory where serverless.yml and handler.js files will be automatically generated. the serverless.yml file contains the config and the handler.js the application source code to be packaged as a lambda fucntion.
 Please change dir to the Serverless project directory where your serverless.yml file is located and install the Dome9 Cloudguard workload plugin
 
 > npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz

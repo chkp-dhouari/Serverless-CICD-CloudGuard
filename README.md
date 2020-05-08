@@ -10,11 +10,19 @@ SAST is the scanning of of the function source code while the runtime security w
 
 Started a Serverless project called lamdba-cicd which will create a dir with the same name and will generate a serverless.yaml file. I have created a github repo to be used as SCM,
 
-First Install the Serverless Framework
+#### Please install the following before starting the lab:
 
-> https://www.serverless.com/framework/docs/providers/aws/
+```
 
-Move to the Serverless project directory where your serverless.yml file is located and install the Dome9 Cloudguard workload plugin
+Node.js
+AWS credentials (Install AWS CLI v2 on local machine and add credentials and region during the CLI installation)
+Git
+Docker
+The Serverless Framework (using Open Source)
+https://www.serverless.com/framework/docs/providers/aws/
+
+```
+Please change dir to the Serverless project directory where your serverless.yml file is located and install the Dome9 Cloudguard workload plugin
 
 > npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
 

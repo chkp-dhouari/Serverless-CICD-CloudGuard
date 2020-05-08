@@ -9,7 +9,26 @@ Here i am buidling a simple web node.js serverless funtion and adding the Check 
 SAST is the scanning of of the function source code while the runtime security whitelists a function behavior.
 
 Started a Serverless project called lamdba-cicd which will create a dir with the same name and will generate a serverless.yaml file. I have created a github repo to be used as SCM,
+
+First Install the Serverless Framework
+
+> https://www.serverless.com/framework/docs/providers/aws/
+
+Move to the Serverless project directory where your serverless.yml file is located and install the Dome9 Cloudguard workload plugin
+
+> npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
+
+Get the Dome9 CloudGuard workload Token and create a protego-config.json file as follow. Place this file in the same dir as your serverless.yml file in the serverless project dir.
+
+```
+{
+    "protegoAccessToken": "DOME9-ACCESS-TOKEN"
+}
+
+```
+
 The CloudGuard plugin is added to the serverless.yaml file using the followin syntax:
+This can be added at the global level before all function definition to apply to all functions or per function within the function section. In my case I am doing this at the global level
 
 ```
 
@@ -44,7 +63,31 @@ custom:
       
 ```
 
-#### The CICD job is satrted using the <sls deploy> command and we can see the proact and fsp performing the code scanning and adding the runtime security layer to the Lambda function.
+You can chose to use any function runtime and code and that is store in the handler.js file under the serverless rpoject directory
+
+##### For this test, I am using a simple node.js function as follow but could be anything and you can also include other serverless dependencies such API GW, S3 bucket, Cognito, DynamoDB etc.. depending on the application you are deploying.
+
+```
+$cat handler.js
+'use strict';
+
+module.exports.cgtest = async event => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        message: 'Go CloudGuard WorkLoad.. Your function has been secured successfully!',
+        input: event,
+      },
+      null,
+      2
+    ),
+  };
+};
+
+```
+
+#### The CICD job is started using the <sls deploy> command and we can see the proact and fsp performing the code scanning and adding the runtime security layer to the Lambda function.
 
 ```
 
@@ -132,7 +175,7 @@ Serverless:
 Protego - FSP Plugin (1.4.25) Summary:
 
   Protected Functions:
-    ✓ hello:  Protected (.serverless/lambda-cicd.zip)    <<<<<<<<<<======= FSP (Runtime Security)
+    ✓ hello:  Protected (.serverless/lambda-cicd.zip)   <<<<<<<<<<======= FSP (Runtime Security)
 
 Serverless: 
 

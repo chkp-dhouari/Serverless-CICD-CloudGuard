@@ -111,35 +111,6 @@ Note: You can configure WebHooks with Github to trigger a CICD Jobs when doing c
 ```
 
 dean:lambda-cicd dasig$ sls deploy
- 
-  Serverless Error ---------------------------------------
- 
-  Serverless plugin "serverless-cloudguard-plugin" not found. Make sure it's installed and listed in the "plugins" section of your serverless config file.
- 
-  Get Support --------------------------------------------
-     Docs:          docs.serverless.com
-     Bugs:          github.com/serverless/serverless/issues
-     Issues:        forum.serverless.com
- 
-  Your Environment Information ---------------------------
-     Operating System:          darwin
-     Node Version:              12.13.1
-     Framework Version:         1.69.0
-     Plugin Version:            3.6.11
-     SDK Version:               2.3.0
-     Components Version:        2.30.10
- 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ nano serverless.yml
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ 
-dean:lambda-cicd dasig$ sls deploy
 Serverless: [serverless-plugin-cloudguard: fsp] FSP:: loadDependencies 
 Serverless: [serverless-plugin-cloudguard: fsp] Initializing... 
 Serverless: [serverless-plugin-cloudguard: fsp] Initializing, Done. 

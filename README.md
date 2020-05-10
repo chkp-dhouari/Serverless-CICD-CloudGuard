@@ -98,9 +98,13 @@ module.exports.cgtest = async event => {
 #### For the CICD Job, I am using GitHub as the SCM repository by adding my serverless project local directory to Git with the following commands:
 
 > git init
+
 > git add -A
+
 > git commit -m 'lambda-cicd'
+
 > git remote add origin git@github.com:chkp-dhouari/lambda-cicd-security.git
+
 > git push -u -f origin master
 
 Note: You can configure WebHooks with Github to trigger a CICD Jobs when doing changes.

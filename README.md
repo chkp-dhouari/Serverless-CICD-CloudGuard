@@ -41,13 +41,13 @@ dean:~ dasig$
 ```
 > Note: please ensure to have installed latest node.js and aws cli with aws api id and key credentials.
 
-THe next step will be to create a serverless project or service with a runtime and directory. The template allows you to chose the runtime used by your function and path is the path of the project directory. you can point it to an existing dir or it will create on for you.
+THe next step will be to create a serverless project or service with a runtime and directory. The template allows you to chose the runtime  used by your function and path is the path of the project directory. you can point it to an existing dir or it will create on for you.
 
 ```
 
-> dean:~ dasig$ serverless create --template aws-nodejs --path d9-lambda
+> dean:~ dasig$ serverless create --template aws-nodejs --path lambda-cicd
 Serverless: Generating boilerplate...
-Serverless: Generating boilerplate in "/Users/dasig/d9-lambda"
+Serverless: Generating boilerplate in "/Users/dasig/lambda-cicd"
  _______                             __
 |   _   .-----.----.--.--.-----.----|  .-----.-----.-----.
 |   |___|  -__|   _|  |  |  -__|   _|  |  -__|__ --|__ --|
@@ -61,6 +61,17 @@ Serverless: Successfully generated boilerplate for template: "aws-nodejs"
 ```
 
 serverless.yml and handler.js files will be automatically generated in the service directory. the serverless.yml file contains the config and the handler.js the application source code to be packaged as a lambda fucntion.
+
+```
+
+dean:~ dasig$ cd lambda-cicd
+dean:lambda-cicd dasig$ ls
+README.md		node_modules		package.json		protego_output
+handler.js		package-lock.json	protego-config.json	serverless.yml
+dean:lambda-cicd dasig$ 
+
+```
+
 Please change dir to the Serverless project directory where your serverless.yml file is located and install the Dome9 Cloudguard workload plugin
 
 

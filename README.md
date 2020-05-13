@@ -13,7 +13,7 @@ Started a Serverless project called lamdba-cicd which will create a dir with the
 
 ```
 
-Node.js
+Node.js > version 6.10
 AWS credentials (Install AWS CLI v2 on local machine and add credentials and region during the CLI installation)
 Git
 Docker
@@ -22,10 +22,50 @@ https://www.serverless.com/framework/docs/providers/aws/
 
 ```
 
-Installing the Serverless Framwework will create a project directory where serverless.yml and handler.js files will be automatically generated. the serverless.yml file contains the config and the handler.js the application source code to be packaged as a lambda fucntion.
+Please start by installing the serverless framework using the command:
+
+> npm install -g serverless
+
+You can verify that serverless 
+
+> serverless -version
+
+```
+dean:~ dasig$ serverless --version
+Framework Core: 1.69.0
+Plugin: 3.6.11
+SDK: 2.3.0
+Components: 2.30.10
+dean:~ dasig$ 
+
+```
+> Note: please ensure to have installed latest node.js and aws cli with aws api id and key credentials.
+
+THe next step will be to create a serverless project or service with a runtime and directory. The template allows you to chose the runtime used by your function and path is the path of the project directory. you can point it to an existing dir or it will create on for you.
+
+```
+
+> dean:~ dasig$ serverless create --template aws-nodejs --path d9-lambda
+Serverless: Generating boilerplate...
+Serverless: Generating boilerplate in "/Users/dasig/d9-lambda"
+ _______                             __
+|   _   .-----.----.--.--.-----.----|  .-----.-----.-----.
+|   |___|  -__|   _|  |  |  -__|   _|  |  -__|__ --|__ --|
+|____   |_____|__|  \___/|_____|__| |__|_____|_____|_____|
+|   |   |             The Serverless Application Framework
+|       |                           serverless.com, v1.69.0
+ -------'
+
+Serverless: Successfully generated boilerplate for template: "aws-nodejs"
+
+```
+
+serverless.yml and handler.js files will be automatically generated in the service directory. the serverless.yml file contains the config and the handler.js the application source code to be packaged as a lambda fucntion.
 Please change dir to the Serverless project directory where your serverless.yml file is located and install the Dome9 Cloudguard workload plugin
 
+
 > npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
+
 
 Get the Dome9 CloudGuard workload Token and create a protego-config.json file as follow. Place this file in the same dir as your serverless.yml file in the serverless project dir.
 

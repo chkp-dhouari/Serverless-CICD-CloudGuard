@@ -188,7 +188,13 @@ dean:lambda-cicd dasig$
 
 ```
 
-#### The CICD Jobs can be managed from CloudGuard Workload for more details:
+You can verify on the AWS console that the Lambda function was created and that the FSP runtime security has been added as a layer to that function:
+
+ ![header image](fsp.png) 
+
+
+
+#### The CICD Jobs can be managed from CloudGuard Workload and the scan results can be accessed from the Protego for more details:
 
 
  ![header image](cicd1.png)

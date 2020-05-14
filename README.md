@@ -1,4 +1,4 @@
-# Check Point CloudGuard Workload CICD Security:  ![header image](cg.jpeg) 
+# Check Point CloudGuard Workload CICD Security:  ![header image](cloudguard-hero-image.png) 
 
 ## CloudGuard Workload Serverless CICD pipeline with SAST/DAST Security
 

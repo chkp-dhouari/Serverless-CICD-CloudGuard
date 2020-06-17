@@ -57,31 +57,35 @@ provider:
 #    - exclude-me-dir/**
 plugins:
  - serverless-cloudguard-plugin
+plugins:
+- serverless-cloudguard-plugin
 
 custom:
-  protego:
+  cloudguard:
     fsp:
-      Enabled: true
+      Enabled: false
     proact:
       Enabled: true
-           
-     StoreJobReport: true                         # default is false
+      Features:
+        PermissiveRole:
+          Enabled: false #true/false
 
-     Features:
-         PermissiveRole:
-         Enabled:        true                     # default is true
-         FailThreshold:   None                    # default is None
 
-         VulnerableDependency:
-         Enabled:        true                     # default is true
-         FailThreshold:  Critical                 # default is None
-
-         CredentialsUsage:
-         Enabled:        true                     # default is true
-         FailThreshold:  None                     # default is None
-
-         RuleViolation:
-         FailThreshold:  None                    # default is None
+#     Features:
+ #        PermissiveRole:
+   #      Enabled:        true                     # default is true
+  #       FailThreshold:   None                    # default is None
+#
+ #        VulnerableDependency:
+  #       Enabled:        true                     # default is true
+   #      FailThreshold:  Critical                 # default is None
+#
+ #        CredentialsUsage:
+  #       Enabled:        true                     # default is true
+   #      FailThreshold:  None                     # default is None
+#
+ #        RuleViolation:
+  #       FailThreshold:  None                    # default is None
     
 
 functions:

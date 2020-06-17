@@ -18,7 +18,7 @@ pipeline {
              withAWS(credentials: 'AWScreds', region: 'us-east-1'){        
                 sh 'sudo apt-get update'
                 sh 'sudo apt install -y nodejs'
-                sh 'sudo apt install -y npm --unsafe-perm=true --allow-root'
+                sh 'sudo npm install --unsafe-perm=true -g now'
                 sh 'sudo npm update'
                 sh 'sudo apt install -y build-essential'
                 sh 'sudo npm install serverless -g'

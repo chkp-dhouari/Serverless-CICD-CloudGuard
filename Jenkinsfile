@@ -19,10 +19,9 @@ pipeline {
                 sh 'sudo apt-get update'
                 sh 'sudo apt install -y npm nodejs'
                 sh 'npm -v'
-                sh 'sudo apt install npmconfig'
+                
                 sh 'sudo npm install serverless -g'
-                sh 'sudo npmconfig set prefix ‘~/.npm-global’'
-                sh 'sudo export PATH=~/.npm-global/bin:$PATH'
+              
                 sh 'sudo npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
                 sh 'sls deploy'
                }

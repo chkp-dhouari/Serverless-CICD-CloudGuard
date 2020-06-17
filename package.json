@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chkp-dhouari/lambda-cicd.git"
+    "url": "git+https://github.com/chkp-dhouari/Serverless-CICD-CloudGuard.git"
   },
   "author": "Dean Houari",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chkp-dhouari/lambda-cicd/issues"
+    "url": "https://github.com/chkp-dhouari/Serverless-CICD-CloudGuard.git/issues"
   },
-  "homepage": "https://github.com/chkp-dhouari/lambda-cicd#readme",
+  "homepage": "https://github.com/chkp-dhouari/Serverless-CICD-CloudGuard.git#readme",
   "devDependencies": {
     "serverless-protego-plugin": "https://artifactory.app.protego.io/protego-serverless-plugin.tgz"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "lambda-cicd",
+  "name": "Serverless-CICD-CloudGuard",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",

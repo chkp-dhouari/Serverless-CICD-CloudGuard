@@ -15,7 +15,7 @@ pipeline {
           }
     stage('Serverless and CloudGuard Install') {   
        steps {   
-                   
+             withAWS(credentials: 'AWScreds', region: 'us-east-1'){        
          script {      
              try{
                 sh 'sudo apt-get update'
@@ -31,19 +31,21 @@ pipeline {
                   }
               }
             }
+          }
          }
            
            
           stage('Serverless Deploy and CloudGuard SAST/DAST Phase') {
              
             steps {
+                  withAWS(credentials: 'AWScreds', region: 'us-east-1'){
 
               sh 'sls deploy'
               
               
              } 
            }
-      
+         }
         
         
   } 

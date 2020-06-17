@@ -55,19 +55,19 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
-
 plugins:
  - serverless-cloudguard-plugin
 
- protego:
-   fsp:
-     Enabled: true
+custom:
+  protego:
+    fsp:
+      Enabled: true
     proact:
       Enabled: true
            
      StoreJobReport: true                         # default is false
 
-      Features:
+     Features:
          PermissiveRole:
          Enabled:        true                     # default is true
          FailThreshold:   None                    # default is None

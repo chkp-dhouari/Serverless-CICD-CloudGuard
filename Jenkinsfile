@@ -25,7 +25,7 @@ pipeline {
                 sh 'sudo npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
                 sh 'cloudguard proact -i serverless.yml'
            
-               } catch (Exception e) 
+                } catch (Exception e){
     
                  echo "Code Analysis is BLOCK and recommend not using the source code"  
                   }

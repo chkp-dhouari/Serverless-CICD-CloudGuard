@@ -21,7 +21,7 @@ pipeline {
                 sh 'npm -v'
                 
                 sh 'sudo npm install serverless -g'
-                sh 'npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
+                sh 'sudo npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
                 sh 'sls deploy'
                }
              }

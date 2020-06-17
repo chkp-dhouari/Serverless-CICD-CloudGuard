@@ -19,7 +19,7 @@ pipeline {
          script {      
              try{
                 sh 'sudo apt install -y npm'
-                sh 'sudo apt install –y nodejs' 
+                sh 'sudo apt install -y nodejs' 
                 sh 'sudo npm install serverless -g'
                 sh 'sudo npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
                 sh 'cloudguard -v'

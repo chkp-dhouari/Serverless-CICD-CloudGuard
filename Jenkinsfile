@@ -18,7 +18,7 @@ pipeline {
                    
          script {      
              try{
-                sh 'apt-get update'
+                sh 'sudo apt-get update'
                 sh 'sudo apt install -y npm node'
                 sh 'npm -v'
                 sh 'sudo npm install serverless -g'

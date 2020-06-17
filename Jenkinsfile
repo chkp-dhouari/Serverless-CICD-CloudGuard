@@ -23,7 +23,7 @@ pipeline {
                 sh 'npm -v'
                 sh 'sudo npm install serverless -g'
                 sh 'sudo npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
-                sh 'cloudguard proact -i serverless.yml'
+                
            
                 } catch (Exception e){
     

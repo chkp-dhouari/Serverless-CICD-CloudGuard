@@ -22,6 +22,7 @@ pipeline {
                 sh 'apt install –yes nodejs' 
                 sh 'npm install serverless -g'
                 sh 'npm install -g https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
+                sh 'cloudguard -v'
            
                } catch (Exception e) {
     
@@ -32,7 +33,7 @@ pipeline {
          }
            
            
-          stage('Serverless Deploy and CLoudGuard SAST/DAST Phase') {
+          stage('Serverless Deploy and CloudGuard SAST/DAST Phase') {
              
             steps {
 

@@ -55,8 +55,7 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
-plugins:
- - serverless-cloudguard-plugin
+
 plugins:
 - serverless-cloudguard-plugin
 

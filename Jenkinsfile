@@ -1,8 +1,8 @@
 pipeline {
       agent any
       environment {
-            token = credentials("token")
-      }
+            clouguardAccessToken = credentials("token")
+               }
   stages {
           
          stage('Clone Github repository') {

@@ -1,8 +1,5 @@
 pipeline {
       agent any
-      environment {
-            token = credentials("token")
-               }
   stages {
           
          stage('Clone Github repository') {

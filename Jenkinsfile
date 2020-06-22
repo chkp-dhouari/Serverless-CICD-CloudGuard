@@ -1,7 +1,7 @@
 pipeline {
       agent any
       environment {
-            clouguardAccessToken = credentials("token")
+            token = credentials("token")
                }
   stages {
           

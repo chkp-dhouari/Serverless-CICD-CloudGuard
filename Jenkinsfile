@@ -23,7 +23,7 @@ pipeline {
                 sh 'npm install serverless -g'
                 sh 'npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
                 sh 'whoami'
-                sh 'sls deploy"
+                sh 'sls deploy'
                }
              }
         }

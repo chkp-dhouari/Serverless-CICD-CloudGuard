@@ -1,6 +1,8 @@
 pipeline {
       agent any
-      
+      environment {
+            token = credentials("token")
+      }
   stages {
           
          stage('Clone Github repository') {
@@ -8,8 +10,8 @@ pipeline {
                checkout scm
                  }
              }
-    stage('Serverless and CloudGuard Install') {   
-       steps {   
+     stage('Serverless and CloudGuard Install') {   
+         steps {   
                     
                 sh 'apt-get update && apt-get install -y nodejs && apt-get install -y npm'
                 sh 'npm i -g npm && npm install serverless -g'

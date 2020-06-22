@@ -18,7 +18,7 @@ pipeline {
                 sh 'npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz'
                 }
               }
-           }
+           
         
         stage("Deploying Serverless app with Cloudguard Security"){
              steps {  
